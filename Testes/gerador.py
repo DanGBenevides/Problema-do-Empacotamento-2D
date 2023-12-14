@@ -1,5 +1,6 @@
 import random
 
+# Gera um teste aleatório com as dimensões da caixa e dos pacotes dentro dos intervalos especificados
 def generate_random_test(num_packages, box_x_range, box_y_range, package_x_range, package_y_range):
     # Gera as dimensões da caixa
     box_x = random.randint(*box_x_range)
@@ -24,11 +25,11 @@ def save_test_to_file(file_path, box_x, box_y, packages):
             file.write(" ".join(map(str, package)) + '\n')
 
 # Exemplo de uso:
-num_packages = 10
-box_x_range = (20, 20)
-box_y_range = (20, 20)
-package_x_range = (1, 10)
-package_y_range = (1, 10)
+num_packages = 50
+box_x_range = (8, 16)
+box_y_range = (8, 16)
+package_x_range = (6, 12)
+package_y_range = (6, 12)
 
 file_path = "Testes/teste" + str(num_packages) + ".txt"
 test_data = generate_random_test(num_packages, box_x_range, box_y_range, package_x_range, package_y_range)

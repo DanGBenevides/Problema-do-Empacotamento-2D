@@ -1,5 +1,6 @@
 import java.util.List;
 
+// Classe que representa o resultado de um empacotamento
 public class Resultado {
     int qtdCaixas;
     List<Integer> order;

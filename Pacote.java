@@ -1,3 +1,4 @@
+// Classe que representa um pacote
 public class Pacote {
     private int id;
     private int x;

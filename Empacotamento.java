@@ -1,10 +1,18 @@
+/*Projeto e Análise de Algoritmos
+ * Trabalho Final - Problema do Empacotamento
+ * Autores: Arthur Santiago Loschi Ruiz e Daniel Gomes Benevides
+ * Professor: Daniel Capanema
+ * Última modificação: 13/12/2023
+*/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
+// Classe principal que lê o arquivo de entrada e chama os métodos de resolução do problema
 public class Empacotamento {
     public static void main(String[] args) throws Exception {
-        FileReader arq = new FileReader("Testes/teste10.txt");
+        FileReader arq = new FileReader("Testes/teste50.txt");
         BufferedReader lerArq = new BufferedReader(arq);
 
         String linha = lerArq.readLine();
@@ -35,7 +43,7 @@ public class Empacotamento {
         respGulosoOrdenado = caixaGuloso.gulosoOrdenado(pacotes, pacotesOriginais);
         tempoFinal = System.nanoTime();
 
-        respGulosoOrdenado.printAllMatriz();
+        // respGulosoOrdenado.printAllMatriz();
         System.out.println("Quantidade de caixas utilizadas: " + respGulosoOrdenado.getqtdCaixas());
         System.out.println("Tempo de execucao: " + (tempoFinal - tempoInicial) / 1000000.0 + " ms");
         caixaGuloso.printContador();
@@ -50,7 +58,7 @@ public class Empacotamento {
         respGulosoFirstFit = gulosoFirstFit.gulosoFirstFit(pacotesOriginais, pacotesOriginais);
         tempoFinal = System.nanoTime();
         
-        respGulosoFirstFit.printAllMatriz();
+        // respGulosoFirstFit.printAllMatriz();
         System.out.println("Quantidade de caixas utilizadas: " + respGulosoFirstFit.getqtdCaixas());
         System.out.println("Tempo de execucao: " + (tempoFinal - tempoInicial) / 1000000.0 + " ms");
         gulosoFirstFit.printContador();
@@ -64,7 +72,7 @@ public class Empacotamento {
         respGulosoBestFit = gulosoBestFit.gulosoBestFit(pacotesOriginais, pacotesOriginais);
         tempoFinal = System.nanoTime();
 
-        respGulosoBestFit.printAllMatriz();
+        // respGulosoBestFit.printAllMatriz();
         System.out.println("Quantidade de caixas utilizadas: " + respGulosoBestFit.getqtdCaixas());
         System.out.println("Tempo de execucao: " + (tempoFinal - tempoInicial) / 1000000.0 + " ms");
         gulosoBestFit.printContador();
@@ -79,7 +87,7 @@ public class Empacotamento {
         respForcaBrutaPS = caixaForcaBruta.forcaBruta(pacotesOriginais);
         tempoFinal = System.nanoTime();
 
-        respForcaBrutaPS.printAllMatriz();
+        // respForcaBrutaPS.printAllMatriz();
         System.out.println("Quantidade de caixas utilizadas: " + respForcaBrutaPS.getqtdCaixas());
         System.out.println("Tempo de execucao: " + (tempoFinal - tempoInicial) / 1000000.0 + " ms");
         caixaForcaBruta.printContador();
@@ -94,7 +102,7 @@ public class Empacotamento {
         respForcaBrutaMS = caixaFB2.bruteForce(pacotesOriginais);
         tempoFinal = System.nanoTime();
 
-        respForcaBrutaMS.printAllMatriz();
+        // respForcaBrutaMS.printAllMatriz();
         System.out.println("Quantidade de caixas utilizadas: " + respForcaBrutaMS.getqtdCaixas());
         System.out.println("Tempo de execucao: " + (tempoFinal - tempoInicial) / 1000000.0 + " ms");
         caixaFB2.printContador();

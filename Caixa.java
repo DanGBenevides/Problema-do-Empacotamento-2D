@@ -1,6 +1,14 @@
+/*Projeto e Análise de Algoritmos
+ * Trabalho Final - Problema do Empacotamento
+ * Autores: Arthur Santiago Loschi Ruiz e Daniel Gomes Benevides
+ * Professor: Daniel Capanema
+ * Última modificação: 13/12/2023
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe que representa uma caixa
 public class Caixa {
     private int x;
     private int y;
@@ -99,6 +107,7 @@ public class Caixa {
         }
     }
 
+    // Printa todas as matrizes de todas as caixas
     public void printAllMatriz(List<Caixa> caixas) {
         for (Caixa caixa : caixas) {
             caixa.printMatriz();
@@ -125,6 +134,7 @@ public class Caixa {
         List<Pacote> copiaPacotes = new ArrayList<Pacote>();
         copiaPacotes.addAll(pacotes);
 
+        // variáveis para controle de inserção
         int i = 0;
         int j = 0;
         while (copiaPacotes.size() > 0) {
